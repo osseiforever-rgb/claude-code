@@ -23,28 +23,6 @@ main().catch((err) => {
   process.exit(1);
 });
 
-  } catch {
-    return false;
-  }
-}
-
-async function fileExists(p: string): Promise<boolean> {
-  try {
-    return (await fs.stat(p)).isFile();
-  } catch {
-    return false;
-  }
-}
-
-/** List immediate children of a directory (files & dirs). */
-async function listDir(dir: string): Promise<string[]> {
-  try {
-    const entries = await fs.readdir(dir, { withFileTypes: true });
-    return entries.map((e: { isDirectory(): boolean; name: string }) => (e.isDirectory() ? e.name + "/" : e.name)).sort();
-  } catch {
-    return [];
-  }
-}
 
 /** Recursively collect all file paths under `root` (relative to root). */
 async function walkFiles(root: string, rel = ""): Promise<string[]> {

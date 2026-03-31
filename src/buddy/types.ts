@@ -147,3 +147,4 @@ export const RARITY_COLORS = {
   legendary: 'warning',
 } as const satisfies Record<Rarity, keyof import('../utils/theme.js').Theme>
 
+

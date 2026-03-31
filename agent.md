@@ -31,3 +31,4 @@ Define how an automated coding agent should operate in this repository.
 
 ## Notes
 - Repository conventions may evolve; update this file when team norms change.
+
