@@ -63,3 +63,4 @@ Bun strips inactive code at build time via `import { feature } from 'bun:bundle'
 - **Understand types**: Centralized in `src/types/`, tool-specific types in `src/Tool.ts`
 - **Follow the bridge**: IDE integration starts at `src/bridge/bridgeMain.ts`
 - **MCP integration**: `src/services/mcp/`
+
