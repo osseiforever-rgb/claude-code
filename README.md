@@ -9,6 +9,7 @@
 [![React + Ink](https://img.shields.io/badge/UI-React_%2B_Ink-61DAFB?logo=react&logoColor=black)](#tech-stack)
 [![Files](https://img.shields.io/badge/~1,900_files-source_only-grey)](#directory-structure)
 [![MCP Server](https://img.shields.io/badge/MCP-Explorer_Server-blueviolet)](#-explore-with-mcp-server)
+[![npm](https://img.shields.io/npm/v/claude-code-explorer-mcp?label=npm&color=cb3837&logo=npm)](https://www.npmjs.com/package/claude-code-explorer-mcp)
 
 > The original unmodified leaked source is preserved in the [`backup` branch](https://github.com/nirholas/claude-code/tree/backup).
 
@@ -83,7 +84,16 @@ Also see: [CONTRIBUTING.md](CONTRIBUTING.md) · [MCP Server README](mcp-server/R
 
 This repo ships an [MCP server](https://modelcontextprotocol.io/) that lets any MCP-compatible client (Claude Code, Claude Desktop, VS Code Copilot, Cursor) explore the full source interactively.
 
-### One-liner setup
+### Install from npm
+
+The MCP server is published as [`claude-code-explorer-mcp`](https://www.npmjs.com/package/claude-code-explorer-mcp) on npm — no need to clone the repo:
+
+```bash
+# Claude Code
+claude mcp add claude-code-explorer -- npx -y claude-code-explorer-mcp
+```
+
+### One-liner setup (from source)
 
 ```bash
 git clone https://github.com/nirholas/claude-code.git ~/claude-code \

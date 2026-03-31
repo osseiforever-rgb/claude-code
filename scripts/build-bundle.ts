@@ -174,7 +174,7 @@ async function main() {
       const outFiles = Object.entries(result.metafile.outputs)
       for (const [file, info] of outFiles) {
         if (file.endsWith('.mjs')) {
-          const sizeMB = (info.bytes / 1024 / 1024).toFixed(2)
+          const sizeMB = ((info as { bytes: number }).bytes / 1024 / 1024).toFixed(2)
           console.log(`\n  ${file}: ${sizeMB} MB`)
         }
       }

@@ -8,7 +8,13 @@
 import { readFileSync, writeFileSync, mkdirSync, copyFileSync, existsSync, chmodSync } from 'fs'
 import { resolve } from 'path'
 
-const ROOT = resolve(import.meta.dir, '..')
+// Bun: import.meta.dir — Node 21+: import.meta.dirname — fallback
+const __dir: string =
+  (import.meta as ImportMeta & { dir?: string; dirname?: string }).dir ??
+  (import.meta as ImportMeta & { dir?: string; dirname?: string }).dirname ??
+  new URL('.', import.meta.url).pathname
+
+const ROOT = resolve(__dir, '..')
 const DIST = resolve(ROOT, 'dist')
 const NPM_DIR = resolve(DIST, 'npm')
 const CLI_BUNDLE = resolve(DIST, 'cli.mjs')
